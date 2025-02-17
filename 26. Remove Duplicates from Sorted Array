@@ -1,0 +1,9 @@
+class Solution:
+    def removeDuplicates(self, nums) -> int:
+        j=0
+        while(j < len(nums)-1):
+            if nums[j] >= nums[j+1]:
+                nums.pop(j+1)
+            else:
+                j+=1
+        return len(nums)
